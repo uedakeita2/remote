@@ -22,7 +22,9 @@ public:
 	BaseScene();
 	virtual ~BaseScene();
 	virtual unique_Base Update(unique_Base own) = 0;	// 絶対ないと困る
-	virtual void RunActQue(std::vector<ActQueT> actList);	// ｺﾋﾟｰを作る 渡す側がmoveで渡す 仮想関数 純粋仮想関数ではない　必ずしも全部のｼｰﾝで必要というわけではないから
+	virtual void RunActQue(std::vector<ActQueT> actList);	// ｺﾋﾟｰを作る 渡す側がmoveで渡す 仮想関数 純粋仮想関数ではない
+	Vector2 _screenPos;
+
 };
 
 

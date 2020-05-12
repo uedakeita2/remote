@@ -7,7 +7,7 @@
 #include "../obj.h"
 #include <vector>
 #include <map>
-//#include "LAYER_ID.h"
+#include "../LAYER_ID.h"
 
 
 enum class DRAW_QUE // enumは型が曖昧 classをつけるとclass名＝名前空間だからXという名前が同じでも違うものになる 
@@ -77,9 +77,6 @@ public:
 	const Vector2 GameScreenSize;
 	const Vector2 GameScreenOffset;		// ｹﾞｰﾑｴﾘｱの左上
 
-	/*bool isFrame(void) { return sFrame; }*/
-	int frame;							// ﾌﾚｰﾑｶｳﾝﾄ用　EnemyMove(LR)で使用
-	int cntFrame;						// enemyｶｳﾝﾄ用 EnemyMove(LR)で使用
 
 private:
 	static SceneMng* sInstance;
@@ -94,7 +91,6 @@ private:
 	std::vector<DrawQueT> _drawList;
 	std::vector<ActQueT> _actList;
 
-	/*static int sFrame;*/
 
 	~SceneMng();
 	SceneMng();
