@@ -128,6 +128,11 @@
   <ItemGroup>
     <ClCompile Include="common\imageMng.cpp" />
     <ClCompile Include="common\Vector2.cpp" />
+    <ClCompile Include="Input\InputState.cpp" />
+    <ClCompile Include="Input\INPUT_ID.cpp" />
+    <ClCompile Include="Input\KeyState.cpp" />
+    <ClCompile Include="LAYER_ID.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene\SceneMng.cpp" />
     <ClCompile Include="Scene\GameScene.cpp" />
     <ClCompile Include="Scene\BaseScene.cpp" />
@@ -139,6 +144,11 @@
     <ClInclude Include="common\details\Vector2.h" />
     <ClInclude Include="common\imageMng.h" />
     <ClInclude Include="common\Vector2.h" />
+    <ClInclude Include="Input\InputState.h" />
+    <ClInclude Include="Input\INPUT_ID.h" />
+    <ClInclude Include="Input\KeyState.h" />
+    <ClInclude Include="LAYER_ID.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Scene\SceneMng.h" />
     <ClInclude Include="Scene\GameScene.h" />
     <ClInclude Include="Scene\BaseScene.h" />

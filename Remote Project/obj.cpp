@@ -2,6 +2,7 @@
 #include "Obj.h"
 #include "Scene/SceneMng.h"
 #include "common/imageMng.h"
+#include "LAYER_ID.h"
 
 
 Obj::Obj()

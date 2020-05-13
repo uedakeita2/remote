@@ -1,5 +1,37 @@
 ﻿  imageMng.cpp
+  LAYER_ID.cpp
+  SceneMng.cpp
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:         with
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:         [
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:             T=int
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:         ]
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:         with
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:         [
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:             T=int
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:         ]
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:         with
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:         [
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:             T=int
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:         ]
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:         with
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:         [
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:             T=int
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(2056): error C2259: 'TitleScene': 抽象クラスをインスタンス化できません。
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(2056): message : 次のメンバーが原因です:
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(2056): message : 'unique_Base BaseScene::Update(unique_Base)': は抽象型です
+C:\Users\uedakeita\Desktop\Remote Project\Scene\BaseScene.h(24): message : 'BaseScene::Update' の宣言を確認してください
+  GameScene.cpp
+  BaseScene.cpp
+  obj.cpp
   TitleScene.cpp
   コードを生成中...
-LIBCMTD.lib(exe_main.obj) : error LNK2019: 未解決の外部シンボル _main が関数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) で参照されました。
-C:\Users\uedakeita\Desktop\Remote Project\Debug\Remote Project.exe : fatal error LNK1120: 1 件の未解決の外部参照
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(130): message : コンパイル対象の関数 テンプレート インスタンス化 'std::unique_ptr<TitleScene,std::default_delete<_Ty>> std::make_unique<TitleScene,,0>(void)' のリファレンスを確認してください
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(130): message :         with
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(130): message :         [
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(130): message :             _Ty=TitleScene
+C:\Users\uedakeita\Desktop\Remote Project\Scene\SceneMng.cpp(130): message :         ]
