@@ -8,6 +8,9 @@ SceneMng* SceneMng::sInstance = nullptr;
 
 SceneMng::SceneMng() :ScreenSize{ 800.0,600.0 }, ScreenCenter{ ScreenSize / 2 }, GameScreenSize{ 500.0,390.0 }, GameScreenOffset{ (ScreenSize - GameScreenSize) / 2 }// ｺﾝｽﾄﾗｸﾀが走った瞬間、ﾛｯｸがかかる。
 {
+	/*sFrame = 0;*/
+	frame = 0;
+	cntFrame = 0;
 }
 
 
@@ -56,6 +59,10 @@ void SceneMng::Draw(void)
 
 		std::tie(id, x, y, rad, std::ignore, layer, blendMode, blendModeNum) = dQue;		// 情報をﾊﾞﾗﾊﾞﾗに取り出す ignore 必要のないものを読み飛ばす
 
+		//if (_screenID[layer] != GetDrawScreen())	// 何が入っているかわからないので危ない
+		//{
+		//	SetDrawScreen(_screenID[layer]);
+		//}
 
 		if ((layer != drawLayer) || (blendModeOld != blendMode) || (blendModeNum != blendModeNumOld))
 		{
@@ -133,13 +140,14 @@ void SceneMng::Run(void)
 	{
 
 		_drawList.clear();
-		//AddDrawQue({ IMAGE_ID("枠")[0],400.0,300.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
+		AddDrawQue({ IMAGE_ID("枠")[0],400.0,300.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
 		_activeScene = (*_activeScene).Update(std::move(_activeScene));	// moveを使うことでコピーを作らずに所有権の譲渡ができる
 		// スマートポインタとしてわかりやすいのが上　_activeScene->Update();
 		// ここで飛ばすACT
 		(*_activeScene).RunActQue(std::move(_actList));	// ｸﾘｱが必要かどうかを判断する
 
 		Draw();
+		frame++;
 
 	}
 
@@ -184,9 +192,9 @@ bool SceneMng::SysInit(void)
 
 	//_debSetUP(200);
 
-	//lpImageMng.GetID("枠", "image/frame.png");
-	//lpImageMng.GetID("black", "image/black.png");
-	//lpImageMng.GetID("white", "image/white.png");
+	lpImageMng.GetID("枠", "image/frame.png");
+	lpImageMng.GetID("black", "image/black.png");
+	lpImageMng.GetID("white", "image/white.png");
 
 	return false;
 }

@@ -73,7 +73,7 @@ protected:
 	int _zOrder;		// •`‰æ—Dæ“x
 
 
+	// std::vector<int> imageID;
 
 };
-
 

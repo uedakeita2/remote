@@ -97,4 +97,4 @@ using Vector2 = Vector2Template<int>;
 using Vector2Dbl = Vector2Template<double>;
 using Vector2Flt = Vector2Template<float>;
 
-#include "../common/details/Vector2.h"
+#include "details/Vector2.h"

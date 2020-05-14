@@ -1,10 +1,9 @@
 #include <DxLib.h>
 #include "imageMng.h"
-#include <string>
 
 std::unique_ptr<imageMng, imageMng::imageMngDeleter> imageMng::sInstance(new imageMng());
 
-const VecInt& imageMng::GetID(const std::string &key)
+const VecInt& imageMng::GetID(const std::string& key)
 {
 	return GetID(key, key);
 }
@@ -23,6 +22,17 @@ const VecInt& imageMng::GetID(const std::string& key, const std::string& fileNam
 {
 	if (imgMap.find(key) == imgMap.end())
 	{
+		/*VecInt tmpData;
+		tmpData.resize(divCnt.x * divCnt.y);
+		if (LoadDivGraph(fileName.c_str(), divCnt.x * divCnt.y, divCnt.x, divCnt.y, divSize.x, divSize.y, &tmpData[0]) == 0)
+		{
+			imgMap[key] = std::move(tmpData);
+		}*/
+		/*else
+		{
+			 return std::move(tmpData);
+		}*/
+		//return imgMap[key];
 		imgMap[key].resize(divCnt.x * divCnt.y);
 		LoadDivGraph(fileName.c_str(), divCnt.x * divCnt.y, divCnt.x, divCnt.y, divSize.x, divSize.y, &imgMap[key][0]);
 	}

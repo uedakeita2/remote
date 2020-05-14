@@ -1,9 +1,8 @@
 #pragma once
-#pragma once
 #include <memory>
 #include <map>
 #include <vector>
-#include "Vector2.h"
+#include "../common/Vector2.h"
 #include <string>
 
 using VecInt = std::vector<int>;
@@ -14,15 +13,15 @@ using VecInt = std::vector<int>;
 class imageMng
 {
 public:
-	static imageMng &GetInstance(void)
+	static imageMng& GetInstance(void)
 	{
 		return *sInstance;
 	}
 
 	const VecInt& GetID(const std::string& key); // éQè∆ìnÇµ
-	const VecInt& GetID(const std::string& key , const std::string& fileName);
-	const VecInt& GetID(const std::string& key, const std::string& fileName , const Vector2& divSize,const Vector2& divCnt);
-	
+	const VecInt& GetID(const std::string& key, const std::string& fileName);
+	const VecInt& GetID(const std::string& key, const std::string& fileName, const Vector2& divSize, const Vector2& divCnt);
+
 private:
 	struct imageMngDeleter
 	{
@@ -40,5 +39,4 @@ private:
 
 	std::map<std::string, VecInt> imgMap;
 };
-
 

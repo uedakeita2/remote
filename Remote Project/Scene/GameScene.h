@@ -2,7 +2,7 @@
 #include <functional>
 #include <vector>
 #include "BaseScene.h"
-#include "../obj.h"
+#include "../Obj.h"
 //#include <bullet.h>
 
 struct FuncShake;
@@ -20,14 +20,14 @@ public:
 	~GameScene();
 	unique_Base Update(unique_Base own) override;
 private:
-	friend FuncShake;
-	friend FuncBullet;
-	friend FuncCheckHit;
+	//friend FuncShake;
+	//friend FuncBullet;
+	//friend FuncCheckHit;
+	//void initFunc(void);
 	std::vector<sharedObj> _objList;
 	void RunActQue(std::vector<ActQueT> actList) override;
 	std::map<ACT_QUE, funcAct> funcQue;
 	sharedObj plObj;
-
 
 };
 

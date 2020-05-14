@@ -2,7 +2,6 @@
 #include "Obj.h"
 #include "Scene/SceneMng.h"
 #include "common/imageMng.h"
-#include "LAYER_ID.h"
 
 
 Obj::Obj()
@@ -12,7 +11,7 @@ Obj::Obj()
 	_animFrame = 0;
 	_animCount = 0;
 	_rad = 0;
-	_zOrder = 0;
+	_zOrder = 100;
 	_unitID = UNIT_ID::NON;
 }
 

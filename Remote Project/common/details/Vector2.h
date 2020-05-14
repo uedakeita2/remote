@@ -1,7 +1,7 @@
 #pragma once
 #include <cmath>
 
-template<class T>	
+template<class T>	// ‰º‚Æ‚Í‚Â‚È‚ª‚Á‚Ä‚¢‚é
 Vector2Template<T>::Vector2Template()
 {
 	this->x = 0;
@@ -247,4 +247,3 @@ Vector2Template<T> abs(const Vector2Template<T>& u)
 
 	return vec;
 }
-#pragma once
