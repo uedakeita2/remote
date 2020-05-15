@@ -20,8 +20,7 @@ public:
 	~GameScene();
 	unique_Base Update(unique_Base own) override;
 private:
-	//friend FuncShake;
-	//friend FuncBullet;
+	friend FuncBullet;
 	//friend FuncCheckHit;
 	//void initFunc(void);
 	std::vector<sharedObj> _objList;

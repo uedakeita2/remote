@@ -5,15 +5,25 @@
 #include "../common/imageMng.h"
 #include "../Player.h"
 #include "../Scene/SceneMng.h"
+#include "../Aim.h"
+#include "func/FuncBullet.h"
 
 GameScene::GameScene()
 {
 
 	lpImageMng.GetID("∑¨◊", "image/player.png", { 100,100 }, { 1,1 });
+	lpImageMng.GetID("è∆èÄ", "image/aim.png", { 50,50 }, { 1,1 });
+	lpImageMng.GetID("íe", "image/bullet.png", { 30,30 }, { 1,1 });
+
 
 	_objList.emplace_back(
-		new Player({ 0, 0 }, { 0,0 })
+		new Player({ 400, 300 }, { 0,0 })
 	);
+
+	_objList.emplace_back(
+		new Aim({ 400, 200 }, { 0,0 })
+	);
+
 
 }
 
@@ -74,5 +84,18 @@ unique_Base GameScene::Update(unique_Base own)
 
 void GameScene::RunActQue(std::vector<ActQueT> actList)
 {
+	for (auto actQue : actList)
+	{
+		switch (actQue.first)
+		{
+		case ACT_QUE::SHOT:
+			FuncBullet()(actQue, this);
+			break;
+		default:
+			//AST();
+			break;
+		}
+	}
+
 }
 

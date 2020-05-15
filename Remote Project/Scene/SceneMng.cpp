@@ -140,7 +140,7 @@ void SceneMng::Run(void)
 	{
 
 		_drawList.clear();
-		AddDrawQue({ IMAGE_ID("枠")[0],400.0,300.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
+		AddDrawQue({ IMAGE_ID("枠")[0],400.0,300.0,0,0,LAYER::BG,DX_BLENDMODE_NOBLEND,255 });
 		_activeScene = (*_activeScene).Update(std::move(_activeScene));	// moveを使うことでコピーを作らずに所有権の譲渡ができる
 		// スマートポインタとしてわかりやすいのが上　_activeScene->Update();
 		// ここで飛ばすACT
@@ -178,7 +178,7 @@ bool SceneMng::AddActQue(ActQueT aQue)
 bool SceneMng::SysInit(void)
 {
 	//ｼｽﾃﾑ処理
-	SetWindowText("kadai5");
+	SetWindowText("Remote");
 	SetGraphMode(ScreenSize.x, ScreenSize.y, 16);				// 800*600ﾄﾞｯﾄ、65536色ﾓｰﾄﾞに設定
 	ChangeWindowMode(true);										// true:window  false:ﾌﾙｽｸﾘｰﾝ
 	if (DxLib_Init() == -1)										// DXﾗｲﾌﾞﾗﾘの初期化
