@@ -1,6 +1,6 @@
-﻿  Player.cpp
-C:\Users\uedakeita\Desktop\copy\Remote Project\Player.h(9,14): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
-  FuncBullet.cpp
-  コードを生成中...
-C:\Users\uedakeita\Desktop\copy\Remote Project\Player.h(9): message : 'Player' の宣言を確認してください
+﻿  bullet.cpp
+C:\Users\uedakeita\Desktop\copy\Remote Project\Aim.h(24,21): warning C4099: 'bullet': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
+C:\Users\uedakeita\Desktop\copy\Remote Project\Aim.h(10): message : 'bullet' の宣言を確認してください
+C:\Users\uedakeita\Desktop\copy\Remote Project\bullet.h(9,14): warning C4099: 'bullet': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
+C:\Users\uedakeita\Desktop\copy\Remote Project\bullet.h(9): message : 'bullet' の宣言を確認してください
   Remote Project.vcxproj -> C:\Users\uedakeita\Desktop\copy\Remote Project\Debug\Remote Project.exe

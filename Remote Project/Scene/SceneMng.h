@@ -77,6 +77,7 @@ public:
 	const Vector2 GameScreenSize;
 	const Vector2 GameScreenOffset;		// ｹﾞｰﾑｴﾘｱの左上
 
+	Vector2Dbl _aimPos;
 	/*bool isFrame(void) { return sFrame; }*/
 	int frame;							// ﾌﾚｰﾑｶｳﾝﾄ用　EnemyMove(LR)で使用
 	int cntFrame;						// enemyｶｳﾝﾄ用 EnemyMove(LR)で使用
