@@ -129,6 +129,7 @@
     <ClCompile Include="Aim.cpp" />
     <ClCompile Include="bullet.cpp" />
     <ClCompile Include="common\imageMng.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene\BaseScene.cpp" />
     <ClCompile Include="Scene\func\FuncBullet.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="bullet.h" />
     <ClInclude Include="common\details\Vector2.h" />
     <ClInclude Include="common\imageMng.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Scene\BaseScene.h" />
     <ClInclude Include="Scene\func\FuncBullet.h" />
     <ClInclude Include="Scene\GameScene.h" />
