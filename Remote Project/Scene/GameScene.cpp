@@ -7,6 +7,9 @@
 #include "../Scene/SceneMng.h"
 #include "../Aim.h"
 #include "func/FuncBullet.h"
+#include "func/FuncCheckHit.h"
+#include "../Enemy.h"
+#include "../EAim.h"
 
 GameScene::GameScene()
 {
@@ -24,6 +27,15 @@ GameScene::GameScene()
 		new Aim({ 400, 200 }, { 0,0 })
 	);
 
+	_objList.emplace_back(
+		new Enemy({ 400, 500 }, { 0,0 })
+	);
+
+	_objList.emplace_back(
+		new EAim({ 400, 400 }, { 0,0 })
+	);
+
+
 
 }
 
@@ -39,22 +51,20 @@ unique_Base GameScene::Update(unique_Base own)
 		_objList.end(),
 		[](sharedObj plObj) {return ((*plObj).unitID() == UNIT_ID::PLAYER); });
 
-	if (!FadeUpdate())
-	{
+	//if (!FadeUpdate())
+	//{
 		for (auto data : _objList)
 		{
 			(*data).Update(*plObj);
 		}
-	}
-
+	//}
 	for (auto data : _objList)
 	{
 		/*data->Draw();*/
-		if (CheckHitKey(KEY_INPUT_SPACE))
-		{
-			(*data).SetAlive(false);
-		}
-
+		//if (CheckHitKey(KEY_INPUT_SPACE))
+		//{
+		//	(*data).SetAlive(false);
+		//}
 		(*data).Draw();
 	}
 
@@ -90,6 +100,9 @@ void GameScene::RunActQue(std::vector<ActQueT> actList)
 		{
 		case ACT_QUE::SHOT:
 			FuncBullet()(actQue, this);
+			break;
+		case ACT_QUE::CHECK_HIT:
+			FuncCheckHit()(actQue, this);
 			break;
 		default:
 			//AST();

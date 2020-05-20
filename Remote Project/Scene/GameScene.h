@@ -21,7 +21,7 @@ public:
 	unique_Base Update(unique_Base own) override;
 private:
 	friend FuncBullet;
-	//friend FuncCheckHit;
+	friend FuncCheckHit;
 	//void initFunc(void);
 	std::vector<sharedObj> _objList;
 	void RunActQue(std::vector<ActQueT> actList) override;
