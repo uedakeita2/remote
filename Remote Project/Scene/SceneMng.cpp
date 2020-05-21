@@ -11,6 +11,8 @@ SceneMng::SceneMng() :ScreenSize{ 800.0,600.0 }, ScreenCenter{ ScreenSize / 2 },
 	/*sFrame = 0;*/
 	frame = 0;
 	cntFrame = 0;
+	PFlag = false;
+	EFlag = false;
 }
 
 

@@ -1,4 +1,2 @@
-﻿  Player.cpp
-C:\Users\uedakeita\Desktop\copy\Remote Project\Player.h(9,14): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
-C:\Users\uedakeita\Desktop\copy\Remote Project\Player.h(9): message : 'Player' の宣言を確認してください
+﻿  TitleScene.cpp
   Remote Project.vcxproj -> C:\Users\uedakeita\Desktop\copy\Remote Project\Debug\Remote Project.exe
