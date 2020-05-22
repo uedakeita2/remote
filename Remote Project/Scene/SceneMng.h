@@ -82,6 +82,8 @@ public:
 	Vector2Dbl _Epos;
 	bool PFlag;
 	bool EFlag;
+	int PLife;
+	int ELife;
 	/*bool isFrame(void) { return sFrame; }*/
 	int frame;							// ﾌﾚｰﾑｶｳﾝﾄ用　EnemyMove(LR)で使用
 	int cntFrame;						// enemyｶｳﾝﾄ用 EnemyMove(LR)で使用

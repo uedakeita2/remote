@@ -23,19 +23,19 @@ GameScene::GameScene()
 
 
 	_objList.emplace_back(
-		new Player({ 400, 300 }, { 0,0 })
+		new Player({ 400, 50 }, { 0,0 })
 	);
 
 	_objList.emplace_back(
-		new Aim({ 400, 200 }, { 0,0 })
+		new Aim({ 400, 150 }, { 0,0 })
 	);
 
 	_objList.emplace_back(
-		new Enemy({ 400, 500 }, { 0,0 })
+		new Enemy({ 400, 550 }, { 0,0 })
 	);
 
 	_objList.emplace_back(
-		new EAim({ 400, 400 }, { 0,0 })
+		new EAim({ 400, 450 }, { 0,0 })
 	);
 
 
