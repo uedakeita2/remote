@@ -128,6 +128,7 @@
   <ItemGroup>
     <ClCompile Include="Aim.cpp" />
     <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="Scene\CharSelScene.cpp" />
     <ClCompile Include="common\imageMng.cpp" />
     <ClCompile Include="EAim.cpp" />
     <ClCompile Include="Ebullet.cpp" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="Aim.h" />
     <ClInclude Include="bullet.h" />
+    <ClInclude Include="Scene\CharSelScene.h" />
     <ClInclude Include="common\details\Vector2.h" />
     <ClInclude Include="common\imageMng.h" />
     <ClInclude Include="EAim.h" />
