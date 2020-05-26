@@ -1,22 +1,2 @@
-﻿  SceneMng.cpp
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:         with
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:         [
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:             T=int
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,41): warning C4244:         ]
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:         with
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:         [
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:             T=int
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,35): warning C4244:         ]
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:         with
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:         [
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:             T=int
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,104): warning C4244:         ]
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244: '引数': 'double' から 'T' への変換です。データが失われる可能性があります。
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:         with
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:         [
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:             T=int
-C:\Users\uedakeita\Desktop\copy\Remote Project\Scene\SceneMng.cpp(9,98): warning C4244:         ]
+﻿  CharSelScene.cpp
   Remote Project.vcxproj -> C:\Users\uedakeita\Desktop\copy\Remote Project\Debug\Remote Project.exe
