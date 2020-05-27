@@ -106,10 +106,10 @@ void Enemy::Update(sharedObj plObj)
 		move(_input, INPUT_ID::UP, _pos.y, -2);
 		move(_input, INPUT_ID::DOWN, _pos.y, 2);
 
-		if ((*_input).state(INPUT_ID::BTN_1).first && !(*_input).state(INPUT_ID::BTN_1).second)
-		{
-			lpSceneMng.AddActQue({ ACT_QUE::SHOT,*this });
-		}
+		//if ((*_input).state(INPUT_ID::BTN_1).first && !(*_input).state(INPUT_ID::BTN_1).second)
+		//{
+		//	lpSceneMng.AddActQue({ ACT_QUE::SHOT,*this });
+		//}
 		lpSceneMng._Epos = _pos;
 		OldKeyFlag = KeyFlag;
 	}
@@ -133,7 +133,7 @@ void Enemy::Draw(void)
 void Enemy::Init(void)
 {
 	AnimVector data;
-	data.emplace_back(IMAGE_ID("·¬×")[1], 30);
+	data.emplace_back(IMAGE_ID("·¬×")[lpSceneMng.EnemyNo], 30);
 	SetAnim(STATE::NORMAL, data);
 
 

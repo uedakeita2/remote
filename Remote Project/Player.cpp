@@ -108,10 +108,10 @@ void Player::Update(sharedObj plObj)
 		move(_input, INPUT_ID::UP, _pos.y, -2);
 		move(_input, INPUT_ID::DOWN, _pos.y, 2);
 
-		if ((*_input).state(INPUT_ID::BTN_1).first && !(*_input).state(INPUT_ID::BTN_1).second)
-		{
-			lpSceneMng.AddActQue({ ACT_QUE::SHOT,*this });
-		}
+		//if ((*_input).state(INPUT_ID::BTN_1).first && !(*_input).state(INPUT_ID::BTN_1).second)
+		//{
+		//	lpSceneMng.AddActQue({ ACT_QUE::SHOT,*this });
+		//}
 
 		OldKeyFlag = KeyFlag;
 	}
@@ -136,7 +136,7 @@ void Player::Draw(void)
 void Player::Init(void)
 {
 	AnimVector data;
-	data.emplace_back(IMAGE_ID("·¬×")[0], 30);
+	data.emplace_back(IMAGE_ID("·¬×")[lpSceneMng.PlayerNo], 30);
 	SetAnim(STATE::NORMAL, data);
 
 

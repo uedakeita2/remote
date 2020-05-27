@@ -84,6 +84,8 @@ public:
 	bool EFlag;
 	int PLife;
 	int ELife;
+	int EnemyNo;
+	int PlayerNo;
 	/*bool isFrame(void) { return sFrame; }*/
 	int frame;							// ﾌﾚｰﾑｶｳﾝﾄ用　EnemyMove(LR)で使用
 	int cntFrame;						// enemyｶｳﾝﾄ用 EnemyMove(LR)で使用

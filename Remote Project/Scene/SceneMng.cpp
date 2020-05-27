@@ -2,6 +2,7 @@
 #include "SceneMng.h"
 #include "GameScene.h"
 #include "TitleScene.h"
+#include "CharSelScene.h"
 #include <algorithm>
 
 SceneMng* SceneMng::sInstance = nullptr;
@@ -15,6 +16,8 @@ SceneMng::SceneMng() :ScreenSize{ 800.0,600.0 }, ScreenCenter{ ScreenSize / 2 },
 	EFlag = false;
 	PLife = 2;
 	ELife = 2;
+	PlayerNo = 0;
+	EnemyNo = 0;
 }
 
 
@@ -138,7 +141,7 @@ SceneMng::~SceneMng()
 void SceneMng::Run(void)
 {
 	SysInit();
-	_activeScene = std::make_unique<GameScene>();
+	_activeScene = std::make_unique<CharSelScene>();
 
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
