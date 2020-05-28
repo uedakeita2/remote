@@ -11,6 +11,7 @@ public:
 	int EPadInput;
 	int EnemyNo;
 	int PlayerNo;
+	int PlayerLife;
 	bool KeyFlag;
 	bool OldKeyFlag;
 	bool EKeyFlag;

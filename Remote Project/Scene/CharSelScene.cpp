@@ -116,6 +116,15 @@ unique_Base CharSelScene::Update(unique_Base own)
 
 	if ((PEnterFlag)&&(EEnterFlag))
 	{
+		switch (PlayerNo)
+		{
+		case 0:
+			PlayerLife = 3;
+			break;
+		case 1:
+			break;
+		}
+
 		lpSceneMng.PlayerNo = PlayerNo;
 		lpSceneMng.EnemyNo = EnemyNo;
 		return std::make_unique<GameScene>();
