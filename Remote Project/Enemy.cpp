@@ -116,7 +116,13 @@ void Enemy::Update(sharedObj plObj)
 	if (lpSceneMng.EFlag)
 	{
 		lpSceneMng.AddDrawQue({ IMAGE_ID("ìGèüóò")[0],400.0,300.0,0,0,LAYER::UI ,DX_BLENDMODE_NOBLEND,255 });
+
+		if ((PadInput & PAD_INPUT_3) != 0)
+		{
+			lpSceneMng.SceneFlag = true;
+		}
 	}
+
 	return;
 }
 

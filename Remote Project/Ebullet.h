@@ -19,6 +19,7 @@ public:
 	Vector2Dbl _speed;			// スピード
 	Vector2 VectorSwitch;		// 弾の反射の切り替え
 	Vector2 boundCnt;			// 弾の反射カウント
+	float BulletSpeed;
 private:
 	void Init(void);
 	bool DestroyProc(void);

@@ -10,6 +10,7 @@
 #include "func/FuncCheckHit.h"
 #include "../Enemy.h"
 #include "../EAim.h"
+#include "../Scene/TitleScene.h"
 
 GameScene::GameScene()
 {
@@ -92,7 +93,14 @@ unique_Base GameScene::Update(unique_Base own)
 	//				),
 	//	_objList.end());
 
+	if (lpSceneMng.SceneFlag)
+	{
+		lpSceneMng.SceneFlag = false;
+		lpSceneMng.PFlag = false;
+		lpSceneMng.EFlag = false;
+		return std::make_unique<TitleScene>();
 
+	}
 
 	return std::move(own);
 }

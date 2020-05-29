@@ -2,6 +2,7 @@
 #include "common/imageMng.h"
 #include "Scene/GameScene.h"
 #include "Input/KeyState.h"
+#include "Scene/TitleScene.h"
 #include <DxLib.h>
 
 Player::Player()
@@ -119,6 +120,11 @@ void Player::Update(sharedObj plObj)
 	if (lpSceneMng.PFlag)
 	{
 		lpSceneMng.AddDrawQue({ IMAGE_ID("é©ã@èüóò")[0],400.0,300.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
+
+		if ((PadInput & PAD_INPUT_3) != 0)
+		{
+			lpSceneMng.SceneFlag = true;
+		}
 	}
 	return;
 }

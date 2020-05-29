@@ -18,7 +18,7 @@ bool FuncCheckHit::operator()(ActQueT& actQue, void* scene)
 				if (abs(actQue.second.pos().y - (*data).pos().y) <= actQue.second.size().y + (*data).size().y &&
 					abs(actQue.second.pos().x - (*data).pos().x) <= actQue.second.size().x + (*data).size().x)
 				{
-					(*data).SetAlive(false);
+					//(*data).SetAlive(false);
 					actQue.second.SetAlive(false);
 					if (actQue.second.unitID() == UNIT_ID::PL_BULLET)
 					{

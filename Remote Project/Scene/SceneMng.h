@@ -82,8 +82,15 @@ public:
 	Vector2Dbl _Epos;
 	bool PFlag;
 	bool EFlag;
+	bool SceneFlag;
 	int PLife;
 	int ELife;
+	int PMaxBoundCnt;
+	int EMaxBoundCnt;
+	int PBulletCnt;
+	int EBulletCnt;
+	float PSpeed;
+	float ESpeed;
 	int EnemyNo;
 	int PlayerNo;
 	/*bool isFrame(void) { return sFrame; }*/

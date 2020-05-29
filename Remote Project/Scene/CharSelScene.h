@@ -12,6 +12,13 @@ public:
 	int EnemyNo;
 	int PlayerNo;
 	int PlayerLife;
+	int EnemyLife;
+	int PMaxBoundCnt;
+	int EMaxBoundCnt;
+	int PBulletCnt;
+	int EBulletCnt;
+	float PSpeed;
+	float ESpeed;
 	bool KeyFlag;
 	bool OldKeyFlag;
 	bool EKeyFlag;

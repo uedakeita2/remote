@@ -15,6 +15,9 @@ CharSelScene::CharSelScene()
 	PEnterFlag = false;
 	EEnterFlag = false;
 	lpImageMng.GetID("ｷｬﾗ", "image/player2.png", { 100,100 }, { 5,1 });
+	lpImageMng.GetID("ﾗｲﾌ", "image/life.png", { 240,100 }, { 5,1 });
+	lpImageMng.GetID("枠2", "image/frame2.png");
+
 }
 
 CharSelScene::~CharSelScene()
@@ -110,6 +113,11 @@ unique_Base CharSelScene::Update(unique_Base own)
 
 	lpSceneMng.AddDrawQue({ IMAGE_ID("ｷｬﾗ")[PlayerNo],200.0,300.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
 	lpSceneMng.AddDrawQue({ IMAGE_ID("ｷｬﾗ")[EnemyNo],600.0,300.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
+	lpSceneMng.AddDrawQue({ IMAGE_ID("ﾗｲﾌ")[PlayerNo],200.0,450.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
+	lpSceneMng.AddDrawQue({ IMAGE_ID("ﾗｲﾌ")[EnemyNo],600.0,450.0,0,0,LAYER::UI,DX_BLENDMODE_NOBLEND,255 });
+	lpSceneMng.AddDrawQue({ IMAGE_ID("枠2")[0],400.0,300.0,0,0,LAYER::BG,DX_BLENDMODE_NOBLEND,255 });
+
+
 
 	OldKeyFlag = KeyFlag;
 	EOldKeyFlag = EKeyFlag;
@@ -118,13 +126,86 @@ unique_Base CharSelScene::Update(unique_Base own)
 	{
 		switch (PlayerNo)
 		{
-		case 0:
+		case 0:	// バランス
 			PlayerLife = 3;
+			PMaxBoundCnt = 4;
+			PBulletCnt = 3;
+			PSpeed = 1.0;
 			break;
-		case 1:
+		case 1:	// パワー
+			PlayerLife = 2;
+			PMaxBoundCnt = 4;
+			PBulletCnt = 4;
+			PSpeed = 1.0;
+			break;
+		case 2:	// スピード
+			PlayerLife = 3;
+			PMaxBoundCnt = 3;
+			PBulletCnt = 3;
+			PSpeed = 1.2;
+			break;
+		case 3:	// タンク
+			PlayerLife = 4;
+			PMaxBoundCnt = 4;
+			PBulletCnt = 3;
+			PSpeed = 0.9;
+			break;
+		case 4:	// テクニック
+			PlayerLife = 3;
+			PMaxBoundCnt = 5;
+			PBulletCnt = 2;
+			PSpeed = 1.0;
+			break;
+		default:
+			"エラー";
 			break;
 		}
 
+		switch (EnemyNo)
+		{
+		case 0:	// バランス
+			EnemyLife = 3;
+			EMaxBoundCnt = 4;
+			EBulletCnt = 3;
+			ESpeed = 1.0;
+			break;
+		case 1:	// パワー
+			EnemyLife = 2;
+			EMaxBoundCnt = 4;
+			EBulletCnt = 4;
+			ESpeed = 1.0;
+			break;
+		case 2:	// スピード
+			EnemyLife = 3;
+			EMaxBoundCnt = 3;
+			EBulletCnt = 3;
+			ESpeed = 1.2;
+			break;
+		case 3:	// タンク
+			EnemyLife = 4;
+			EMaxBoundCnt = 4;
+			EBulletCnt = 3;
+			ESpeed = 0.9;
+			break;
+		case 4:	// テクニック
+			EnemyLife = 3;
+			EMaxBoundCnt = 5;
+			EBulletCnt = 2;
+			ESpeed = 1.0;
+			break;
+		default:
+			"エラー";
+			break;
+		}
+
+		lpSceneMng.PMaxBoundCnt = PMaxBoundCnt;
+		lpSceneMng.EMaxBoundCnt = EMaxBoundCnt;
+		lpSceneMng.PBulletCnt = PBulletCnt;
+		lpSceneMng.EBulletCnt = EBulletCnt;
+		lpSceneMng.PSpeed = PSpeed;
+		lpSceneMng.ESpeed = ESpeed;
+		lpSceneMng.PLife = PlayerLife;
+		lpSceneMng.ELife = EnemyLife;
 		lpSceneMng.PlayerNo = PlayerNo;
 		lpSceneMng.EnemyNo = EnemyNo;
 		return std::make_unique<GameScene>();

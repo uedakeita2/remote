@@ -18,6 +18,7 @@ bullet::bullet(UNIT_ID unitID, Vector2Dbl pos)
 	VectorSwitch = { 1,1 };
 	boundCnt = { 0,0 };
 	_length = lpSceneMng._aimPos - _pos;
+	BulletSpeed = lpSceneMng.PSpeed;
 	Init();
 }
 
@@ -30,8 +31,8 @@ void bullet::Update(sharedObj plObj)
 	}
 	//  À•W‚ðXV
 	_rad = atan2(_length.y, _length.x);
-	_vector.x = cos(_rad) * 10;
-	_vector.y = sin(_rad) * 10;
+	_vector.x = cos(_rad) * 10 * BulletSpeed;
+	_vector.y = sin(_rad) * 10 * BulletSpeed;
 	if ((_pos.x >= 800) || (_pos.x <= 0))
 	{
 		boundCnt.x++;
@@ -95,7 +96,7 @@ bool bullet::DestroyProc(void)
 		return true;
 	}
 
-	if (boundCnt.x + boundCnt.y >= 4)
+	if (boundCnt.x + boundCnt.y > lpSceneMng.PMaxBoundCnt)
 	{
 		SetAlive(false);
 	}
